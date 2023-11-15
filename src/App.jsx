@@ -27,8 +27,8 @@ function App() {
 
   return (
     <>
-      <Box border={5}>
-        <Stack border={3} direction='row' justifyContent="space-evenly">
+      <Box border={0}>
+        <Stack border={0} direction='row' justifyContent="space-evenly">
         <SideBar />
         <Feed/>
         <RightBar />

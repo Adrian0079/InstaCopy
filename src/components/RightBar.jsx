@@ -10,7 +10,7 @@ const BttAll = styled(Button)({
     marginLeft:"65px",
     fontSize:"11px",
     height: "25px",
-    width:"80px",
+    width:"85px",
     color: "black", 
     backgroundColor: 'white',
     transition: 'color 0.3s ease',
@@ -39,9 +39,12 @@ const Bttfollow = styled(Button)({
 const RightBar = () => {
   return (
     <Box flex={3}>
+        <Box width="100%" height={50}>
+
+        </Box>
         <ListItem alignItems="flex-start">
                 <ListItemAvatar>
-                <Avatar alt="Elizabeth Olsen" src={yo} />
+                <Avatar alt="JAGB" src={yo} />
                 </ListItemAvatar>
                 <ListItemText
                 primary="eladrian079_fx"
