@@ -1,4 +1,4 @@
-import { Avatar, Box, Stack, Typography } from '@mui/material'
+import { Avatar, Box, List, ListItem, ListItemText, ListSubheader, Stack, Typography } from '@mui/material'
 import React from 'react'
 import pe1 from '../images/pe1.png'
 import pe2 from '../images/pe2.png'
@@ -17,7 +17,7 @@ import { Bookmark, BookmarkBorder, ChatBubbleOutline, FavoriteBorder, Send, Sent
 const Feed = () => {
   return (
     <Box flex={4.9}>
-      <Stack  direction="row" border={0} mt={7} justifyContent="flex-end"
+      <Stack  direction="row" border={3} mt={7} justifyContent="flex-end"
         spacing={2.8} mr={6}
       >
         <Box border={0} justifyContent="center" textAlign="center">
@@ -216,6 +216,36 @@ const Feed = () => {
 
 
         {/* Card 3======================> */}
+
+
+
+        <List
+      sx={{
+        width: '100%',
+        maxWidth: 360,
+        bgcolor: 'background.paper',
+        position: 'relative',
+        overflow: 'auto',
+        maxHeight: 300,
+        '& ul': { padding: 0 },
+        color:"red"
+      }}
+      subheader={<li />}
+    >
+      {[0, 1, 2, 3, 4].map((sectionId) => (
+        <li key={`section-${sectionId}`}>
+          <ul>
+            <ListSubheader sx={{color:"red"}}>{`I'm sticky ${sectionId}`}</ListSubheader>
+            {[0, 1, 2].map((item) => (
+              <ListItem key={`item-${sectionId}-${item}`} sx={{color:"red"}}>
+                <ListItemText primary={`Item ${item}`}  sx={{color:"red"}}/>
+              </ListItem>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </List>
+
       </Stack>
     </Box>
   )

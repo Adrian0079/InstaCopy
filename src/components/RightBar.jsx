@@ -39,6 +39,7 @@ const Bttfollow = styled(Button)({
 const RightBar = () => {
   return (
     <Box flex={3}>
+        <Box position="fixed">{/*Fixed*/}
         <Box width="100%" height={50}>
 
         </Box>
@@ -137,6 +138,7 @@ const RightBar = () => {
                 />
             </ListItem>
     </List>
+    </Box>{/*Fixed*/}
     </Box>
   )
 }
