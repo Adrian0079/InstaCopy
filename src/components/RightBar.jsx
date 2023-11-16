@@ -1,10 +1,14 @@
-import { Avatar, Box, Button, Divider, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
+import { Avatar, Box, Button, Divider, List, ListItem, ListItemAvatar, ListItemText, Typography, createTheme } from '@mui/material'
 import React from 'react'
 import eli from '../images/Eli.png'
 import chesp from '../images/chesp.png'
 import anne from '../images/anne.jpg'
 import styled from 'styled-components'
 import yo from '../images/yo.jpg'
+import nouser from '../images/nouser.jpg'
+import { ThemeProvider } from '@emotion/react'
+
+
 
 const BttAll = styled(Button)({
     marginLeft:"65px",
@@ -37,8 +41,22 @@ const Bttfollow = styled(Button)({
 
 
 const RightBar = () => {
+
+    const theme1 = createTheme({
+        breakpoints: {
+          values: {
+            xs: 0,
+            sm: 600,
+            md: 900,
+            lg: 1160,
+            xl: 1536,
+          },
+        },
+      });
+
   return (
-    <Box flex={3}>
+    <ThemeProvider theme={theme1}>
+    <Box flex={3} sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}>
         <Box position="fixed">{/*Fixed*/}
         <Box width="100%" height={50}>
 
@@ -140,6 +158,7 @@ const RightBar = () => {
     </List>
     </Box>{/*Fixed*/}
     </Box>
+    </ThemeProvider>
   )
 }
 

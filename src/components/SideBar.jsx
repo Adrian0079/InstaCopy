@@ -13,6 +13,7 @@ const SideBar = () => {
       values: {
         xs: 0,
         sm: 600,
+        msm:760,
         md: 900,
         lg: 1263,
         xl: 1536,
@@ -26,14 +27,21 @@ const SideBar = () => {
   return (
 
     <ThemeProvider theme={theme1}>
-    <Box flex={1.77} border={2}>
+    <Box border={0} sx={{ 
+      flex:{xs: 0.4, sm: 0.4, md: 0.4, lg: 1.77}, 
+      display:{xs:"none", sm:"none", msm:"inline-block"}
+      }}>
       <Box position="fixed">{/*Fixed*/}
       <img src={instap} alt="insta_Logo" width="100%"/>
       <List>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton >
               <ListItemIcon>
-                <Home sx={{border:"12px"}}/>
+                <Home sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Inicio" 
               sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
@@ -44,10 +52,14 @@ const SideBar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Search />
+                <Search sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Buscar" 
-              sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
+              sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }
+              }/>
             </ListItemButton>
           </ListItem>
 
@@ -55,7 +67,10 @@ const SideBar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Explore />
+                <Explore sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Explorar" 
               sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
@@ -66,7 +81,10 @@ const SideBar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <OndemandVideo />
+                <OndemandVideo sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Reels" 
               sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
@@ -77,7 +95,10 @@ const SideBar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <MapsUgc />
+                <MapsUgc sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Mensajes" 
               sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
@@ -88,7 +109,10 @@ const SideBar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Favorite />
+                <Favorite sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Notificaciones" 
               sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
@@ -99,7 +123,10 @@ const SideBar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <AddCircleOutline />
+                <AddCircleOutline sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Crear" 
               sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
@@ -110,7 +137,10 @@ const SideBar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Inbox />
+                <Inbox sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Perfil" 
               sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
@@ -123,7 +153,10 @@ const SideBar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Inbox />
+                <Inbox sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Threads" 
               sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
@@ -134,7 +167,11 @@ const SideBar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <ControlPoint />
+                <ControlPoint sx={{
+                width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
+                
+              }}/>
               </ListItemIcon>
               <ListItemText primary="Más" 
               sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
