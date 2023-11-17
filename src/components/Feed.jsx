@@ -54,7 +54,8 @@ const Feed = () => {
       <Stack  direction="row" border={0} mt={7} 
         spacing={2.8} sx={{
           justifyContent:{xs:"flex-start", sm:"flex-start", rs:"flex-end", md:"flex-end", dmd:"flex-end", lg:"flex-end", xl:"flex-end"},
-          marginRight: {xs:0, sm:0, rs:6, md:6, dmd:6, lg:6, xl:6}}}
+          marginRight: {xs:0, sm:0, rs:6, md:6, dmd:6, lg:6, xl:6
+          }}}
       >
         <Box border={0} justifyContent="center" textAlign="center">
           <Avatar alt='' src={pe1} 
@@ -177,7 +178,9 @@ const Feed = () => {
         {/* Card======================> */}
 
         {/* Card 2======================> */}
-        <Stack border={0} height="50rem" width={470} mr={17.4} boxShadow={0}>
+        <Stack border={0} height="50rem" width={470} boxShadow={0}
+        sx={{marginRight: {xs:0, sm:0, rs:17.4, md:17.4, dmd:17.4, lg:17.4, xl:17.4}}}
+        >
 
           <Stack border={0} height={56} justifyContent="flex-start" direction="row">
             
@@ -230,7 +233,9 @@ const Feed = () => {
         {/* Card 2======================> */}
         
         {/* Card 3======================> */}
-        <Stack border={0} height="50rem" width={470} mr={17.4} boxShadow={0}>
+        <Stack border={0} height="50rem" width={470} boxShadow={0}
+        sx={{marginRight: {xs:0, sm:0, rs:17.4, md:17.4, dmd:17.4, lg:17.4, xl:17.4}}}
+        >
 
           <Stack border={0} height={56} justifyContent="flex-start" direction="row" >
             
