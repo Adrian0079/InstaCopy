@@ -19,25 +19,15 @@ import styled from 'styled-components'
 
 const Feed = () => {
 
-  // const  CBox = styled(Box)(({ theme }) => ({
-    
-  // transition: 'width 0.3s ease-in-out', // Transición suave al cambiar el ancho
-  // '& *': {
-  //   transition: 'transform 0.3s ease-in-out', // Transición suave del contenido al escalar
-  // },
-  // '&:hover': {
-  //   width: '100px', // Ancho reducido al hacer hover (puedes cambiar esto a tu necesidad)
-  // },
-  // '&:hover *': {
-  //   transform: 'scale(0.8)', // Escala del contenido al hacer hover (ajusta el valor según sea necesario)
-  // },
-    
+ 
   // }))
 
   const theme1 = createTheme({
     breakpoints: {
       values: {
         xs: 0,
+        pers2:408,
+        pers1:493,
         sm: 600,
         rs: 718,
         md: 900,
@@ -60,24 +50,33 @@ const Feed = () => {
         <Box border={0} justifyContent="center" textAlign="center">
           <Avatar alt='' src={pe1} 
           sx={{ 
+          display:{xs:"none", sm:"block"},
           height:{xs:40, sm:40, rs:56, md:56, dmd:56, lg:56, xl:56 }, 
           width: {xs:40, sm:40, rs:56, md:56, dmd:56, lg:56, xl:56}, 
           border:"2px #ff0c60 solid"}}/>
-          <Typography color="initial" alignItems="center" fontSize={12.5}>jose.rt</Typography>
+          <Typography color="initial" alignItems="center" fontSize={12.5}
+          sx={{display:{xs:"none", sm:"block"},}}
+          >jose.rt</Typography>
         </Box>
         <Box border={0} justifyContent="center" textAlign="center">
           <Avatar alt='' src={pe2} sx={{ 
+          display:{xs:"none", pers1:"block"},
           height:{xs:40, sm:40, rs:56, md:56, dmd:56, lg:56, xl:56 }, 
           width: {xs:40, sm:40, rs:56, md:56, dmd:56, lg:56, xl:56},
           border:"2px #ff0c60 solid"}}/>
-          <Typography color="initial" alignItems="center" fontSize={12.5}>luisa.ew</Typography>
+          <Typography color="initial" alignItems="center" fontSize={12.5}
+          sx={{display:{xs:"none", pers1:"block"},}}
+          >luisa.ew</Typography>
         </Box>
         <Box border={0} justifyContent="center" textAlign="center">
         <Avatar alt='' src={pe3} sx={{
+          display:{xs:"none", pers2:"block"},
           height:{xs:40, sm:40, rs:56, md:56, dmd:56, lg:56, xl:56 }, 
           width: {xs:40, sm:40, rs:56, md:56, dmd:56, lg:56, xl:56},
           border:"2px #ff0c60 solid"}}/>
-        <Typography color="initial" alignItems="center" fontSize={12.5}>marcc.6t</Typography>
+        <Typography color="initial" alignItems="center" fontSize={12.5}
+        sx={{display:{xs:"none", pers2:"block"},}}
+        >marcc.6t</Typography>
         </Box>
         <Box border={0} justifyContent="center" textAlign="center">
         <Avatar alt='' src={pe4} sx={{
@@ -109,10 +108,13 @@ const Feed = () => {
         </Box>
         <Box border={0} justifyContent="center" textAlign="center">
         <Avatar alt='' src={pe8} sx={{
+        
           height:{xs:40, sm:40, rs:56, md:56, dmd:56, lg:56, xl:56 }, 
           width: {xs:40, sm:40, rs:56, md:56, dmd:56, lg:56, xl:56},
           border:"2px #ff0c60 solid"}}/>
-        <Typography color="initial" alignItems="center" fontSize={12.5}>af3</Typography>
+        <Typography color="initial" alignItems="center" fontSize={12.5}
+        
+        >af3</Typography>
         </Box>
         
       </Stack>
@@ -120,8 +122,12 @@ const Feed = () => {
       alignItems="flex-end" mt={5.1} direction="column"
       >
         {/* Card======================> */}
-        <Stack border={0} height="50rem" width={470} boxShadow={0}
-        sx={{marginRight: {xs:0, sm:0, rs:17.4, md:17.4, dmd:17.4, lg:17.4, xl:17.4}}
+        <Stack border={0} boxShadow={0}
+        sx={{
+          marginRight: {xs:6.3, sm:9.5, rs:17.4, md:17.4, dmd:17.4, lg:17.4, xl:17.4},
+          width:{xs:270, sm:370, rs:470, md:470, dmd:470, lg:470, xl:470},
+          height:{xs:"40rem", sm:"50rem", rs:"50rem", md:"50rem", dmd:"50rem", lg:"50rem", xl:"50rem"}
+        }
           
       }
         >
@@ -129,13 +135,29 @@ const Feed = () => {
           <Stack border={0} height={56} justifyContent="flex-start" direction="row">
             
               <Avatar alt='' src={pe8} sx={{ height:37, width: 37, border:"2px #ff0c60 solid", marginTop:"7.2px"}}/>
-              <Stack border={0} width={500} direction="row" alignItems="center" ml={0.8} >
-                <Typography color="initial" alignItems="center" 
-                fontSize={12.5}>carsSr{'\u00A0\u00A0'}•{'\u00A0\u00A0'}7h</Typography>
-                  <Stack border={0} width={50} height="100%" ml={37} alignItems="flex-end" justifyContent="center">
-                    <Typography>•••</Typography>
-                  </Stack>
+              
+              <Stack border={0} 
+              width={500} 
+              direction="row" 
+              alignItems="center" ml={0.8} 
+              >
+                <Stack
+                border={0} 
+                height={50} 
+                width="95%" 
+                alignItems="center" 
+                direction="row" 
+                >
+                  <Typography color="initial" alignItems="center" border={0}
+                  fontSize={12.5}>carsSr{'\u00A0\u00A0'}•{'\u00A0\u00A0'}7h</Typography>
+                </Stack>
+
+                <Stack border={0}>
+                  <Typography border={0} alignItems="center">•••</Typography>
+                </Stack>
+                    
               </Stack>
+
           </Stack>
 
           <img src={fim1} alt="Lamborghini1" width="100%" height={500} />
@@ -169,8 +191,12 @@ const Feed = () => {
           <Typography fontSize={13}><strong>gercollector</strong> Excellent. 👏.</Typography>
           <Typography fontSize={13} color="gray">Ver los 334 comentarios</Typography>
           <Stack direction="row"> 
-            <Typography fontSize={13} color="gray">Agrega un comentario...</Typography>
-            <SentimentSatisfiedAlt sx={{width:20, height:20, color: "gray", marginLeft:38}}/>
+            <Stack border={0} width="95%" alignItems="center" direction="row">
+              <Typography fontSize={13} color="gray">Agrega un comentario...</Typography>
+            </Stack>
+            <Stack border={0} alignItems="center" justifyContent="center">
+              <SentimentSatisfiedAlt sx={{width:20, height:20, color: "gray", marginLeft:0}}/>
+            </Stack>
           </Stack>
 
         </Stack>
@@ -179,18 +205,36 @@ const Feed = () => {
 
         {/* Card 2======================> */}
         <Stack border={0} height="50rem" width={470} boxShadow={0}
-        sx={{marginRight: {xs:0, sm:0, rs:17.4, md:17.4, dmd:17.4, lg:17.4, xl:17.4}}}
+        sx={{
+          marginRight: {xs:6.3, sm:9.5, rs:17.4, md:17.4, dmd:17.4, lg:17.4, xl:17.4},
+          width:{xs:270, sm:370, rs:470, md:470, dmd:470, lg:470, xl:470},
+          height:{xs:"40rem", sm:"50rem", rs:"50rem", md:"50rem", dmd:"50rem", lg:"50rem", xl:"50rem"}
+        }}
         >
 
           <Stack border={0} height={56} justifyContent="flex-start" direction="row">
             
               <Avatar alt='' src={pe8} sx={{ height:37, width: 37, border:"2px #ff0c60 solid", marginTop:"7.2px"}}/>
-              <Stack border={0} width={500} direction="row" alignItems="center" ml={0.8} >
-                <Typography color="initial" alignItems="center" 
-                fontSize={12.5}>jose.rt{'\u00A0\u00A0'}•{'\u00A0\u00A0'}7h</Typography>
-                  <Stack border={0} width={50} height="100%" ml={37} alignItems="flex-end" justifyContent="center">
-                    <Typography>•••</Typography>
-                  </Stack>
+              <Stack border={0} 
+              width={500} 
+              direction="row" 
+              alignItems="center" ml={0.8} 
+              >
+                <Stack
+                border={0} 
+                height={50} 
+                width="95%" 
+                alignItems="center" 
+                direction="row" 
+                >
+                  <Typography color="initial" alignItems="center" border={0}
+                  fontSize={12.5}>Lb07{'\u00A0\u00A0'}•{'\u00A0\u00A0'}7h</Typography>
+                </Stack>
+
+                <Stack border={0}>
+                  <Typography border={0} alignItems="center">•••</Typography>
+                </Stack>
+                    
               </Stack>
           </Stack>
 
@@ -225,27 +269,50 @@ const Feed = () => {
           <Typography fontSize={13}><strong>gercollector</strong> Excellent. 👏.</Typography>
           <Typography fontSize={13} color="gray">Ver los 334 comentarios</Typography>
           <Stack direction="row"> 
-            <Typography fontSize={13} color="gray">Agrega un comentario...</Typography>
-            <SentimentSatisfiedAlt sx={{width:20, height:20, color: "gray", marginLeft:38}}/>
+            <Stack border={0} width="95%" alignItems="center" direction="row">
+              <Typography fontSize={13} color="gray">Agrega un comentario...</Typography>
+            </Stack>
+            <Stack border={0} alignItems="center" justifyContent="center">
+              <SentimentSatisfiedAlt sx={{width:20, height:20, color: "gray", marginLeft:0}}/>
+            </Stack>
           </Stack>
+
           
         </Stack>
         {/* Card 2======================> */}
         
         {/* Card 3======================> */}
         <Stack border={0} height="50rem" width={470} boxShadow={0}
-        sx={{marginRight: {xs:0, sm:0, rs:17.4, md:17.4, dmd:17.4, lg:17.4, xl:17.4}}}
+        sx={{
+          marginRight: {xs:6.3, sm:9.5, rs:17.4, md:17.4, dmd:17.4, lg:17.4, xl:17.4},
+          width:{xs:270, sm:370, rs:470, md:470, dmd:470, lg:470, xl:470},
+          height:{xs:"40rem", sm:"50rem", rs:"50rem", md:"50rem", dmd:"50rem", lg:"50rem", xl:"50rem"}
+        }}
         >
 
           <Stack border={0} height={56} justifyContent="flex-start" direction="row" >
             
               <Avatar alt='' src={pe8} sx={{ height:37, width: 37, border:"2px #ff0c60 solid", marginTop:"7.2px"}}/>
-              <Stack border={0} width={500} direction="row" alignItems="center" ml={0.8} >
-                <Typography color="initial" alignItems="center" 
-                fontSize={12.5}>mtang.s{'\u00A0\u00A0'}•{'\u00A0\u00A0'}7h</Typography>
-                  <Stack border={0} width={50} height="100%" ml={37} alignItems="flex-end" justifyContent="center">
-                    <Typography>•••</Typography>
-                  </Stack>
+              <Stack border={0} 
+              width={500} 
+              direction="row" 
+              alignItems="center" ml={0.8} 
+              >
+                <Stack
+                border={0} 
+                height={50} 
+                width="95%" 
+                alignItems="center" 
+                direction="row" 
+                >
+                  <Typography color="initial" alignItems="center" border={0}
+                  fontSize={12.5}>MustangR34{'\u00A0\u00A0'}•{'\u00A0\u00A0'}7h</Typography>
+                </Stack>
+
+                <Stack border={0}>
+                  <Typography border={0} alignItems="center">•••</Typography>
+                </Stack>
+                    
               </Stack>
           </Stack>
 
@@ -280,9 +347,14 @@ const Feed = () => {
           <Typography fontSize={13}><strong>gercollector</strong> Excellent. 👏.</Typography>
           <Typography fontSize={13} color="gray">Ver los 334 comentarios</Typography>
           <Stack direction="row"> 
-            <Typography fontSize={13} color="gray">Agrega un comentario...</Typography>
-            <SentimentSatisfiedAlt sx={{width:20, height:20, color: "gray", marginLeft:38}}/>
+            <Stack border={0} width="95%" alignItems="center" direction="row">
+              <Typography fontSize={13} color="gray">Agrega un comentario...</Typography>
+            </Stack>
+            <Stack border={0} alignItems="center" justifyContent="center">
+              <SentimentSatisfiedAlt sx={{width:20, height:20, color: "gray", marginLeft:0}}/>
+            </Stack>
           </Stack>
+
 
         </Stack>
 

@@ -16,7 +16,10 @@ const SideBar = () => {
         msm:760,
         md: 900,
         lg: 1263,
+        pers3: 1316,
+        pers2:1400,
         xl: 1536,
+        pers1:1609,
       },
     },
   });
@@ -32,19 +35,32 @@ const SideBar = () => {
       display:{xs:"none", sm:"none", msm:"inline-block"}
       }}>
       <Box position="fixed">{/*Fixed*/}
-      <img src={instap} alt="insta_Logo" width="100%"/>
+      <Box border={0} width={330} 
+      sx={{
+        width:{xs:"none", sm: "none", msm:"none", md:"none", lg:270, pers3:270 , pers2:330},
+        display:{xs:"none", lg:"block"},
+      }}>
+        <img src={instap} alt="insta_Logo" width="100%" /> 
+      </Box>
+      
       <List>
-          <ListItem disablePadding>
-            <ListItemButton >
+          <ListItem disablePadding sx={{
+            // width:{xs:"none", sm:"none", md:"none", lg:"10vw", xl:"12vw", pers1:"18vw",},
+            width:"100%"
+            }}>
+            <ListItemButton>
               <ListItemIcon>
                 <Home sx={{
+                  border:0,
                 width:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
                 height:{xs:"35px", sm:"35px", md:"35px", lg:"30px"},
                 
               }}/>
               </ListItemIcon>
               <ListItemText primary="Inicio" 
-              sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"} }}/>
+              sx={{ display: {xs: "none", sm: "none", md: "none", lg:"block"},
+            }}
+              />
             </ListItemButton>
           </ListItem>
 
